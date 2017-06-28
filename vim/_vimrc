@@ -84,11 +84,11 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -97,19 +97,16 @@ Plugin 'git://git.wincent.com/command-t.git'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'scrooloose/nerdtree'
 
 "状态栏美化
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"缓存
+"目录树和查找文件
+Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-"注释插件
+"代码完成提示
 "Plugin 'scrooloose/nerdcommenter'
-"自动完成代码
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'gotcha/ipdb'
-"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
