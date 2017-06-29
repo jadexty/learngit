@@ -1,5 +1,9 @@
 "--------------
 "author tianye
+"time 6.29
+"comment 
+"test fugitive
+"---------------
 "
 " rtartup {{{
 filetype indent plugin off 
@@ -73,12 +77,16 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=c:/vim/vim80/vimfiles/bundle/Vundle.vim/
-call vundle#begin('c:/vim/vim80/vimfiles/bundle/')
+set rtp+=/vim/vim80/vimfiles/bundle/Vundle.vim/
+call vundle#begin('/vim/vim80/vimfiles/bundle/')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+"Ctags工具是用来遍历源代码文件生成tags文件，这些tags文件能被编辑器或其它工具用来快速查找定位源代码中的符"号
+"Plugin 'universal-ctags/ctags-win32'
+"Plugin 'vim-scripts/taglist.vim'
 " 括号自动补全
 Plugin 'Raimondi/delimitMate' 
 " The following are examples of different formats supported.
@@ -87,12 +95,12 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 
 " Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'git@github.com:jadexty/learngit.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
  Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -279,6 +287,9 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 map <f5> :w<cr>:!python %<cr>
 "}}}
 
+
 "在上方插入一个空行{{{
 "map tt O<Esc>
 "}}}
+"
+"333333333333333
