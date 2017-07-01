@@ -8,16 +8,14 @@ git push --set-upstream origin master
 
 所以解决的办法是, 首先设定本地master的上游分支:
 
-!git branch --set-upstream-to=origin/master
+Git branch --set-upstream-to=origin/master
 
 　　然后pull:
 !git pull --rebase
 
 　　最后再push:
+Git push
 
-!git push
+Git push origin study_git
+Git 等于!git
 
- git push origin study_git
-
-Gread % 出错,要Gread 绝对路径;
-Gwrite 就可以,原因不明.
