@@ -4,7 +4,6 @@
 import pythoncom
 import pyHook
 import time
-#import pyhk
 import os
 import sys
 import ctypes
@@ -30,33 +29,30 @@ class CrunPy:
         '运行文件'
         os.system("python "+ py_file)
         
-    def end_self(self):
+    def kill_py(self):
         '退出程序'
-        sys._exit()
-    def IsNotWriteLog(self):
-        '是否记录日志'
-        return  self.bFlag   
+        os.system("taskkill /im " + py_file )
         
     def IsExitCommand(self, event):
         '''
                      是否当前按下了程序定义的热键'
-                      如果按下了ALT+F2，将记录日志的状态位置为True,不记录日志,
-                     如果按下了ALT+F1，将记录日志状态位置为False,表示记录日志
+                      如果按下了ALT+F2，
+                     如果按下了ALT+F1，
         '''
         if event.Alt == 32 and str(event.Key) == 'F2':
-            self.bFlag = True
+            print 'F2 true'
+            self.kill_py()
         elif  event.Alt == 32 and str(event.Key) == 'F1':  
-            self.bFlag = False 
+            print 'F1 true'
+            self.run_py()
         
     
     def onKeyboardEvent(self, event): 
         
-        #处理按下的热键
+        print #处理按下的热键
         self.IsExitCommand(event)
         
     
-    #默认记录
-    bFlag = False
             
         
 
@@ -73,19 +69,19 @@ def InspectKeyAndMouseEvent():
     hm.HookKeyboard()
     
     #监控鼠标
-    hm.MouseAll = my_event.onMouseEvent
-    hm.HookMouse()
+    #hm.MouseAll = my_event.onMouseEvent
+    #hm.HookMouse()
     
     #循环获取消息
     pythoncom.PumpMessages()
-    my_event.end_self()             
+    my_event.kill_py()             
      
 def handle_start_InspecEvent():
-    "开始监控（按下ALT+ F1）"
+    print "开始监控（按下ALT+ F1）"
     InspectKeyAndMouseEvent()
 
 def handle_stop_InspecEvent():
-    "停止监控  (按下ALT+ F2)"
+    print"停止监控  (按下ALT+ F2)"
     InspectKeyAndMouseEvent(False)   
         
           
@@ -95,8 +91,6 @@ if __name__ == "__main__":
     Input：NONE
     Output: NONE
     author: socrates
-    blog:http://blog.csdn.net/dyx1024
-    date:2012-03-09
     '''  
     
     byref = ctypes.byref
@@ -104,16 +98,20 @@ if __name__ == "__main__":
     
     #定义快捷键
     HOTKEYS = {
-               1 : (win32con.VK_F1, win32con.MOD_ALT)
-#               2 : (win32con.VK_F2, win32con.MOD_ALT)
+               1 : (win32con.VK_F1, win32con.MOD_ALT),
+               2 : (win32con.VK_F2, win32con.MOD_ALT)
                }
-
+    print "HOTKEYS->" 
+    print HOTKEYS
     #快捷键对应的驱动函数
     HOTKEY_ACTIONS = {
         1 : handle_start_InspecEvent,
-#        2 : handle_stop_InspecEvent
+        2 : handle_stop_InspecEvent
         }    
 
+    print "HOTKEY_ACTIONS ->" 
+    print type(HOTKEY_ACTIONS) 
+    print HOTKEY_ACTIONS
     #注册快捷键
     for id, (vk, modifiers) in HOTKEYS.items ():
         if not user32.RegisterHotKey (None, id, modifiers, vk):
@@ -140,3 +138,4 @@ if __name__ == "__main__":
 
 #64位的python,装32位的pyhook模块,会报错.
 
+#尽量复制粘贴代码,以免出错
