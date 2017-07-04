@@ -3,15 +3,38 @@
 #description：
 #用autopy模拟鼠标
 #------------------------------
+import logging
 import autopy
 import time
 import sys
 import os
 from ctypes import *
 import win32api
+import subprocess
 '''
-用桌面的快捷方式启动
+用桌面的快捷方式启动,
+跳出的shell窗口,会把手游助手的图标挡住.
 '''
+def begin_shouYou_mouse():
+    "模拟鼠标双击手游快捷方式位置"
+    time.sleep(0.2)
+    autopy.mouse.move(115, 129)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+'''
+用os.system() 运行一个bat文件,打开手游程序.
+'''
+def begin_shouyou_subProcess():
+    ""
+    #child = subprocess.Popen(["ping","-t","www.google.com"])
+    child = subprocess.Popen(["mini.bat" ])
+    #child = subprocess.Popen(["mini.bat"])
+    #os.system('mini.bat')
+    #os.system('c:\\bat_file\mini.bat')
+
 def shooting():
     "定点循环攻击"
     x = 1287 
@@ -30,11 +53,43 @@ def shooting():
         #time.sleep(0.5)
         n = n + 1 
     os._exit()
+
+def open_game():
+    "我的游戏658, 215"
+    time.sleep(5)
+    autopy.mouse.move(658, 215)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+
+def open_byl():
+    "捕鱼来了657, 359"
+    autopy.mouse.move(657, 359)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+
+def close_gongGao():
+    "关闭游戏公告1195, 302"
+    time.sleep(3)
+    autopy.mouse.move(1195, 302)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+begin_shouyou_subProcess()
+open_game()
+#time.sleep(5)
+#open_byl()
+#time.sleep(20)
+#close_gongGao()
 #shooting()
-'''
-启动手游
-'''
-os.system("c:\\2.bat")
+
 #x = os.popen('D:\\Program Files\\TxGameAssistant\\AppMarket\\AppMarket.exe')
 #print x
 #os.system('cd D:\Program Files\TxGameAssistant\AppMarket\ AppMarket.exe')
