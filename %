@@ -25,35 +25,26 @@ def begin_shouYou_mouse():
     autopy.mouse.toggle(False)
     time.sleep(0.2)
 '''
-用os.system() 运行一个bat文件,打开手游程序.
+合适的时间关闭子进程
 '''
 def begin_shouyou_subProcess():
-    ""
-    #child = subprocess.Popen(["ping","-t","www.google.com"])
+    "用子进程打开手游"
     child = subprocess.Popen(["mini.bat" ])
-    #child = subprocess.Popen(["mini.bat"])
-    #os.system('mini.bat')
-    #os.system('c:\\bat_file\mini.bat')
-
-def shooting():
-    "定点循环攻击"
-    x = 1287 
-    y = 637 
-    n = 0
-    autopy.mouse.move(x, y) 
-    #while n < 10:
-    while True:
-        print (x,y,n)
-        autopy.mouse.click()
-        autopy.mouse.toggle(True)
-        #time.sleep(0.5)
-        time.sleep(0.1)
-        autopy.mouse.toggle(False)
-        time.sleep(0.1)
-        #time.sleep(0.5)
-        n = n + 1 
-    os._exit()
-
+def exit_shouyou():
+    "退出游戏"
+    autopy.mouse.move(1293, 182)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+    "确认"
+    autopy.mouse.move(867, 546)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
 def open_game():
     "我的游戏658, 215"
     time.sleep(5)
@@ -63,7 +54,6 @@ def open_game():
     time.sleep(0.2)
     autopy.mouse.toggle(False)
     time.sleep(0.2)
-
 def open_byl():
     "捕鱼来了657, 359"
     autopy.mouse.move(657, 359)
@@ -82,22 +72,92 @@ def close_gongGao():
     time.sleep(0.2)
     autopy.mouse.toggle(False)
     time.sleep(0.2)
-begin_shouyou_subProcess()
-open_game()
-#time.sleep(5)
-#open_byl()
-#time.sleep(20)
-#close_gongGao()
+def close_zhiDaole():
+    "关闭知道了818, 700"
+    time.sleep(3)
+    autopy.mouse.move(818, 700)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+def open_beiLvMs():
+    "进入倍率模式523, 627"
+    time.sleep(3)
+    autopy.mouse.move(523, 627)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+def open_fangJian():
+    "进入房间820, 511"
+    time.sleep(3)
+    autopy.mouse.move(820, 511)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+def close_weekqd():
+    "关闭每周签到"
+    time.sleep(3)
+    autopy.mouse.move(1194, 325)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+def begin_end():
+    "开始游戏到退出游戏"
+    begin_shouyou_subProcess()
+    open_game()
+    time.sleep(5)
+    open_byl()
+    time.sleep(70)
+    close_gongGao()
+#os.system("pause")
+    time.sleep(20)
+    close_zhiDaole()
+    "判断过十二点,关闭每周签到"
+    if False:
+        time.sleep(10)
+        close_weekqd()
+    time.sleep(10)
+    open_beiLvMs()
+    time.sleep(10)
+    open_fangJian()
+    time.sleep(10)
+def shooting():
+    "定点循环攻击"
+    x = 1287 
+    y = 637 
+    n = 0
+    autopy.mouse.move(x, y) 
+    "时长"
+    begin_time = time.time()
+    #set_time = 60*60*60*1.5
+    set_time = 10 
+   #while n < 10:
+    while True:
+        autopy.mouse.click()
+        autopy.mouse.toggle(True)
+        time.sleep(0.1)
+        autopy.mouse.toggle(False)
+        time.sleep(0.1)
+        "如果玩的时间超过设定值,就退出游戏,休息一段时间,重新游戏"
+        end_time = time.time()
+        exp_time = end_time-begin_time
+        #print begin_time  
+        #print end_time
+        #print exp_time
+        #print set_time 
+        if exp_time > set_time : 
+            exit_shouyou()
+            #pause_time = 60*60*60*1.5
+            pause_time = 30 
+            time.sleep(pause_time)
+            begin_end()   
+begin_end()
 #shooting()
-
-#x = os.popen('D:\\Program Files\\TxGameAssistant\\AppMarket\\AppMarket.exe')
-#print x
-#os.system('cd D:\Program Files\TxGameAssistant\AppMarket\ AppMarket.exe')
-#os.system("AppMarket.exe")
-
-#win32api.ShellExecute(0, 'open', 'notepad.exe', '','',0)
-#user32 = windll.LoadLibrary('user32.dll') # 加载动态链接库
-#user32.MessageBoxA(0, 'Ctypes is cool!', 'Ctypes', 0)  
-
-#win32api.ShellExecute(0, 'open', 'notepad.exe', '', '', 1)  
-#win32api.ShellExecute(0, 'open', 'AppMarket.exe', '', '', 1)  
+#exit_shouyou()
