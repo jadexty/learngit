@@ -13,16 +13,22 @@ import os
 
 #让鼠标在一条竖线上一边点击，一边移动
 #(920, 740),(920, 680)
+#Position:(1083, 675)
+#Position:(1083, 637)
+#107, 145
 
-i = 740 
-print(i)
-while i >680 :
-    autopy.mouse.move(920, i) 
-    print ("i:  ",i)
-    time.sleep(1/2)
-    autopy.mouse.click
-    time.sleep(1/2)
-    i = i - 1 
+x = 920 
+y = 740 
+n = 0
+autopy.mouse.move(x, y) 
+while n < 10:
+    print (x,y,n)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(1)
+    autopy.mouse.toggle(False)
+    time.sleep(1)
+    n = n + 1 
 #sys.exit(0)
 #os.popen('taskkill.exe /im vimrc.exe')
 #exit()
