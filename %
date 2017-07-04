@@ -1,91 +1,30 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#alt+f1运行相应的文件. alt+f2退出程序.
-#py_file是bat文件可以.
-import pythoncom
-import pyHook
+# coding=utf-8
+#捕鱼来了辅助
+#description：
+#用autopy模拟鼠标移动，实现自动攻击
+#------------------------------
+import autopy
 import time
-import os
 import sys
-import ctypes
-from ctypes import wintypes
-import win32con
-import win32api 
+import os
+#autopy.mouse.move(957, 695) 
+#time.sleep(1/3)
+#autopy.mouse.click
 
-#py_file = ""python " + py_file"
-py_file = "c:\\1.bat"
+#让鼠标在一条竖线上一边点击，一边移动
+#(920, 740),(920, 680)
 
-def handle_start_InspecEvent():
-    print "ALT+ F1"
-    #os.system("python " + py_file)
-    os.system(py_file )
-    #InspectKeyAndMouseEvent(True)
+i = 740 
+print(i)
+while i >680 :
+    autopy.mouse.move(920, i) 
+    print ("i:  ",i)
+    time.sleep(1/2)
+    autopy.mouse.click
+    time.sleep(1/2)
+    i = i - 1 
+#sys.exit(0)
+#os.popen('taskkill.exe /im vimrc.exe')
+#exit()
+os._exit()
 
-def handle_stop_InspecEvent():
-    print"ALT+ F2"
-    #os.system("taskkill /im vimrc.exe")
-    os._exit(0)
-    #os.system("taskkill /im 1.bat"  )
-    #InspectKeyAndMouseEvent(False)   
-        
-          
-if __name__ == "__main__":     
-    '''
-    Function:通过快捷键控制程序运行
-    Input：NONE
-    Output: NONE
-    author: socrates
-    '''  
-    
-    byref = ctypes.byref
-    user32 = ctypes.windll.user32
-    
-    #定义快捷键
-    HOTKEYS = {
-               1 : (win32con.VK_F1, win32con.MOD_ALT),
-               2 : (win32con.VK_F2, win32con.MOD_ALT)
-               }
-    print "HOTKEYS->" 
-    print HOTKEYS
-    print "\n"
-    #快捷键对应的驱动函数
-    HOTKEY_ACTIONS = {
-        1 : handle_start_InspecEvent,
-        2 : handle_stop_InspecEvent
-        }    
-
-    print "HOTKEY_ACTIONS ->" 
-    print type(HOTKEY_ACTIONS) 
-    print HOTKEY_ACTIONS
-    print "\n"
-
-    #注册快捷键
-    for id, (vk, modifiers) in HOTKEYS.items ():
-        if not user32.RegisterHotKey (None, id, modifiers, vk):
-            print "Unable to register id", id    
-    
-    #启动监听        
-    try:
-        msg = wintypes.MSG ()
-        print "msg ->"
-        print msg
-        print "\n"
-        while user32.GetMessageA (byref (msg), None, 0, 0) != 0:
-            if msg.message == win32con.WM_HOTKEY:
-                action_to_take = HOTKEY_ACTIONS.get (msg.wParam)
-                if action_to_take:
-                    action_to_take ()
-
-            user32.TranslateMessage (byref (msg))
-            user32.DispatchMessageA (byref (msg))
-
-    finally:
-        for id in HOTKEYS.keys ():
-            user32.UnregisterHotKey (None, id) 
-
-#ImportError: DLL load failed: %1 不是有效的 Win32 应用程序。
-#Hit any key to close this window...
-
-#64位的python,装32位的pyhook模块,会报错.
-
-#尽量复制粘贴代码,以免出错
