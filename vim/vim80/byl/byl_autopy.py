@@ -12,25 +12,27 @@ from ctypes import *
 import win32api
 import subprocess
 import threading
-
+import win32api
 '''
 守护线程的实例为什么先于run_DaemonThread运行?
 估计是非正常关闭本程序, 有资源没有释放.
 '''
 class MyThread(threading.Thread):
     "守护线程打开手游"
-    print 'MyThread'
+    print 'MyThread \n'
     def run(self):
-        #os.system('run_shouYou.bat')
-        os.system(r'D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe')
-        #child = subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
+        #os.system('notepad')
+        out = os.system('\bat_files\run_shouYou.bat')
+        print "out -->{} \n".format(out)
+        #subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
         #subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
 def run_DaemonThread():
     "运行守护线程"
-    print 'run_DaemonThread'
     t = MyThread()
+    print "t -->{} \n".format(t)
     t.setDaemon(True)
     t.start()
+    print 't.start \n'
 
 def run_os():
     "os.system命令打开手游"
@@ -204,7 +206,8 @@ def open_set():
     close_zhiDaole()
     "切换账号成功"
     print 'qiehuan ok'
-open_set()
+run_DaemonThread()
+#open_set()
 #checkin()
 '''
 倍率道具

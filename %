@@ -2,7 +2,7 @@
 #捕鱼来了辅助
 #description：
 #用autopy模拟鼠标
-#------------------------------
+#---------------
 import logging
 import autopy
 import time
