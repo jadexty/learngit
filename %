@@ -79,33 +79,28 @@ def shooting():
     "定点循环攻击"
     x = 1287 
     y = 637 
-    #n = 0
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
-    #set_time = 60*60*60*1.5
-    set_time = 10 
-   #while n < 10:
+    set_time = 60*60*60*1.5
+    #set_time = 10 
     end_time = 0
     exp_time = end_time-begin_time
     while exp_time < set_time:
         autopy.mouse.click()
         autopy.mouse.toggle(True)
-        time.sleep(0.1)
+        #time.sleep(0.1)
+        time.sleep(0.05)
         autopy.mouse.toggle(False)
-        time.sleep(0.1)
-        "如果玩的时间超过设定值,就退出循环."
+        #time.sleep(0.01)
+        time.sleep(0.05)
+        "如果玩的时间超过set_time,就退出循环."
         end_time = time.time()
         exp_time = end_time-begin_time
-        print begin_time  
-        print end_time
-        print exp_time
-        print set_time 
-            #pause_time = 60*60*60*1.5
-            #pause_time = 30 
-            #time.sleep(pause_time)
-            #begin_end() 
-    exit_shouyou() 
+        #print begin_time  
+        #print end_time
+        #print exp_time
+        #print set_time 
 def begin_end():
     "开始到结束"
     "subProcess线程运行手游"
@@ -116,23 +111,40 @@ def begin_end():
     #run_os()
     time.sleep(3)
     open_game()
+    print 'open_game'
     time.sleep(3)
     open_byl()
-    time.sleep(60)
+    print 'open_byl'
+    time.sleep(80)
     close_gongGao()
+    print 'close_gongGao'
     #os.system("pause")
-    time.sleep(15)
+    time.sleep(25)
     close_zhiDaole()
+    print 'close_zhiDaole'
     "判断过十二点,关闭每周签到"
     if False:
         time.sleep(10)
         close_weekqd()
     time.sleep(10)
     open_beiLvMs()
+    print 'open_beiLvMs'
     time.sleep(5)
     open_fangJian()
+    print 'open_fangJian'
     time.sleep(10)
     shooting()
-begin_end()
+    print 'shooting'
+    exit_shouyou() 
+    print 'exit_shouyou'
+while True:
+    begin_end()
+    #relax_time = 60*60*1.5
+    relax_time = 60*15
+    time.sleep(relax_time)
+'''
+倍率道具
+识别图片,子线程.
+'''
 #shooting()
 #exit_shouyou()
