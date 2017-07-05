@@ -30,109 +30,45 @@ def begin_shouYou_mouse():
 def begin_shouyou_subProcess():
     "用子进程打开手游"
     child = subprocess.Popen(["mini.bat" ])
-def exit_shouyou():
-    "退出游戏"
-    autopy.mouse.move(1293, 182)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
-    "确认"
-    autopy.mouse.move(867, 546)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
-def open_game():
-    "我的游戏658, 215"
-    time.sleep(5)
-    autopy.mouse.move(658, 215)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
-def open_byl():
-    "捕鱼来了657, 359"
-    autopy.mouse.move(657, 359)
+def click(x,y):
+    autopy.mouse.move(x,y)
     autopy.mouse.click()
     autopy.mouse.toggle(True)
     time.sleep(0.2)
     autopy.mouse.toggle(False)
     time.sleep(0.2)
 
+def exit_shouyou():
+    "退出游戏1293, 182"
+    click(1293.182) 
+    "确认"
+    click(867, 546)
+def open_game():
+    "我的游戏658, 215"
+    click(658,215)
+def open_byl():
+    "捕鱼来了657, 359"
+    click(657, 359)
 def close_gongGao():
     "关闭游戏公告1195, 302"
-    time.sleep(3)
-    autopy.mouse.move(1195, 302)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
+    click(1195, 302)
 def close_zhiDaole():
     "关闭知道了818, 700"
-    time.sleep(3)
-    autopy.mouse.move(818, 700)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
+    click(818, 700)
 def open_beiLvMs():
     "进入倍率模式523, 627"
-    time.sleep(3)
-    autopy.mouse.move(523, 627)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
+    click (523, 627)
 def open_fangJian():
     "进入房间820, 511"
-    time.sleep(3)
-    autopy.mouse.move(820, 511)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
+    click(820, 511)
 def close_weekqd():
     "关闭每周签到"
-    time.sleep(3)
-    autopy.mouse.move(1194, 325)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
-def begin_end():
-    "开始游戏到退出游戏"
-    begin_shouyou_subProcess()
-    open_game()
-    time.sleep(5)
-    open_byl()
-    time.sleep(70)
-    close_gongGao()
-#os.system("pause")
-    time.sleep(20)
-    close_zhiDaole()
-    "判断过十二点,关闭每周签到"
-    if False:
-        time.sleep(10)
-        close_weekqd()
-    time.sleep(10)
-    open_beiLvMs()
-    time.sleep(10)
-    open_fangJian()
-    time.sleep(10)
+    click(1194, 325)
 def shooting():
     "定点循环攻击"
     x = 1287 
     y = 637 
-    n = 0
+    #n = 0
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
@@ -157,7 +93,29 @@ def shooting():
             #pause_time = 60*60*60*1.5
             pause_time = 30 
             time.sleep(pause_time)
-            begin_end()   
+            begin_end() 
+def begin_end():
+    "开始游戏到退出游戏"
+    begin_shouyou_subProcess()
+    open_game()
+    time.sleep(10)
+    open_byl()
+    time.sleep(70)
+    close_gongGao()
+    #os.system("pause")
+    time.sleep(20)
+    close_zhiDaole()
+    "判断过十二点,关闭每周签到"
+    if False:
+        time.sleep(10)
+        close_weekqd()
+    time.sleep(10)
+    open_beiLvMs()
+    time.sleep(10)
+    open_fangJian()
+    time.sleep(10)
+    shooting()
+  
 begin_end()
 #shooting()
 #exit_shouyou()
