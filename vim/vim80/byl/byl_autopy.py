@@ -62,13 +62,14 @@ def click(x,y):
     time.sleep(0.2)
 def exit_shouyou():
     print 'exit_shouyou'
+    "sys.exit()会关闭父进程"
     #sys.exit()退出程序"
-    sys.exit()
-    #os.system("taskkill /im AppMarket.exe /f")
+    #sys.exit()
+    os.system("taskkill /im AppMarket.exe /f")
+    os.system("taskkill /im  AndroidEmulator.exe /f")
     #click(1293.182) 
     #"确认"
     #click(867, 546)
-    #os.system("taskkill /im  AndroidEmulator.exe /f")
 def open_game():
     "我的游戏658, 215"
     click(658,215)
@@ -97,8 +98,8 @@ def shooting():
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
-    set_time = 60*60*60*1.5
-    #set_time = 10 
+    #set_time = 60*60*60*1.5
+    set_time = 10 
     end_time = 0
     exp_time = end_time-begin_time
     while exp_time < set_time:
@@ -157,7 +158,8 @@ def begin_begin():
     while True:
         begin_end()
         #relax_time = 60*60*1.5
-        relax_time = 60*15
+        #relax_time = 60*15
+        relax_time = 5
         time.sleep(relax_time)
 def checkin():
     print 'checkin'
@@ -223,5 +225,3 @@ qiehuan ok
 Hit any key to close this window...
 '''
 
-#shooting()
-#exit_shouyou()
