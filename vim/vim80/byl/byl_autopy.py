@@ -17,15 +17,11 @@ import win32api
 守护线程的实例为什么先于run_DaemonThread运行?
 估计是非正常关闭本程序, 有资源没有释放.
 '''
-class MyThread(threading.Thread):
-    "守护线程打开手游"
-    print 'MyThread \n'
-    def run(self):
-        #os.system('notepad')
-        out = os.system('\bat_files\run_shouYou.bat')
-        print "out -->{} \n".format(out)
-        #subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
-        #subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
+#class MyThread(threading.Thread):
+#    "守护线程打开手游"
+#    print 'MyThread \n'
+#    def run(self):
+#        print "out -->{} \n".format(out)
 def run_DaemonThread():
     "运行守护线程"
     t = MyThread()
@@ -33,7 +29,7 @@ def run_DaemonThread():
     t.setDaemon(True)
     t.start()
     print 't.start \n'
-
+#run_DaemonThread()
 def run_os():
     "os.system命令打开手游"
     print 'run_os'
@@ -50,11 +46,12 @@ def begin__mouse():
 合适的时间关闭子进程
 '''
 def begin_subProcess():
-    print 'begin_subProcess'
     "用子进程打开手游"
     print 'begin_subProcess run'
-    child = subprocess.call("D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe")
-    #child = subprocess.Popen(["run_shouYou.bat" ])
+    "call 父进程会等待子进程"  
+    #child = subprocess.call(["D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe"])
+    "popen不会等待子进程"
+    child = subprocess.Popen(["D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe" ])
 def click(x,y):
     "鼠标移动到指定位置,左键点击一下"
     autopy.mouse.move(x,y)
@@ -164,10 +161,8 @@ def begin_begin():
         time.sleep(relax_time)
 def checkin():
     print 'checkin'
-    "会停止在subprocess"
-    #begin_subProcess()
-    "会经过守护线程"
-    run_DaemonThread()
+    "subProcess open shouyou"
+    begin_subProcess()
     time.sleep(3)
     open_game()
     print 'open_game'
@@ -206,7 +201,8 @@ def open_set():
     close_zhiDaole()
     "切换账号成功"
     print 'qiehuan ok'
-run_DaemonThread()
+begin_begin()
+#checkin()
 #open_set()
 #checkin()
 '''
