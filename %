@@ -1,3 +1,138 @@
-cd /
-cd vim/vim80/byl
-python byl__autopy.py
+# coding=utf-8
+#捕鱼来了辅助
+#description：
+#用autopy模拟鼠标
+#------------------------------
+import logging
+import autopy
+import time
+import sys
+import os
+from ctypes import *
+import win32api
+import subprocess
+import threading
+class MyThread(threading.Thread):
+    "守护线程打开手游"
+    def run(self):
+        os.system('run_shouYou.bat')
+
+def run_DaemonThread():
+    "运行守护线程"
+    t = MyThread()
+    t.setDaemon(True)
+    t.start()
+def run_os():
+    "os.system命令打开手游"
+    os.system('run_shouYou.bat')
+'''
+用桌面的快捷方式启动,
+跳出的shell窗口,会把手游助手的图标挡住.
+'''
+def begin_shouYou_mouse():
+    "模拟鼠标双击手游快捷方式位置"
+    click(115, 129)
+'''
+合适的时间关闭子进程
+'''
+def begin_shouyou_subProcess():
+    "用子进程打开手游"
+    child = subprocess.Popen(["mini.bat" ])
+    #child = subprocess.Popen(["run_shouYou.bat" ])
+def click(x,y):
+    "鼠标移动到指定位置,左键点击一下"
+    autopy.mouse.move(x,y)
+    autopy.mouse.click()
+    autopy.mouse.toggle(True)
+    time.sleep(0.2)
+    autopy.mouse.toggle(False)
+    time.sleep(0.2)
+def exit_shouyou():
+    #"退出游戏1293, 182"
+    #click(1293.182) 
+    os.system("taskkill /im AppMarket.exe /f")
+    "确认"
+    #click(867, 546)
+    os.system("taskkill /im  AndroidEmulator.exe /f")
+def open_game():
+    "我的游戏658, 215"
+    click(658,215)
+def open_byl():
+    "打开捕鱼来了657, 359"
+    click(657, 359)
+def close_gongGao():
+    "关闭游戏公告1195, 302"
+    click(1195, 302)
+def close_zhiDaole():
+    "关闭知道了818, 700"
+    click(818, 700)
+def open_beiLvMs():
+    "进入倍率模式523, 627"
+    click (523, 627)
+def open_fangJian():
+    "进入房间820, 511"
+    click(820, 511)
+def close_weekqd():
+    "关闭每周签到"
+    click(1194, 325)
+def shooting():
+    "定点循环攻击"
+    x = 1287 
+    y = 637 
+    #n = 0
+    autopy.mouse.move(x, y) 
+    "时长"
+    begin_time = time.time()
+    #set_time = 60*60*60*1.5
+    set_time = 10 
+   #while n < 10:
+    end_time = 0
+    exp_time = end_time-begin_time
+    while exp_time < set_time:
+        autopy.mouse.click()
+        autopy.mouse.toggle(True)
+        time.sleep(0.1)
+        autopy.mouse.toggle(False)
+        time.sleep(0.1)
+        "如果玩的时间超过设定值,就退出循环."
+        end_time = time.time()
+        exp_time = end_time-begin_time
+        print begin_time  
+        print end_time
+        print exp_time
+        print set_time 
+            #pause_time = 60*60*60*1.5
+            #pause_time = 30 
+            #time.sleep(pause_time)
+            #begin_end() 
+    exit_shouyou() 
+def begin_end():
+    "开始到结束"
+    "subProcess线程运行手游"
+    #begin_shouyou_subProcess()
+    "守护线程打开手游"
+    run_DaemonThread()
+    "不用子线程的方式打开手游, 线程会停在run_os(),不会继续下去."
+    #run_os()
+    time.sleep(3)
+    open_game()
+    time.sleep(3)
+    open_byl()
+    time.sleep(60)
+    close_gongGao()
+    #os.system("pause")
+    time.sleep(15)
+    close_zhiDaole()
+    "判断过十二点,关闭每周签到"
+    if False:
+        time.sleep(10)
+        close_weekqd()
+    time.sleep(10)
+    open_beiLvMs()
+    time.sleep(5)
+    open_fangJian()
+    time.sleep(10)
+    shooting()
+begin_end()
+#shooting()
+#exit_shouyou()
