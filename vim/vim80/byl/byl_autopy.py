@@ -3,6 +3,10 @@
 #description：
 #用autopy模拟鼠标
 #---------------
+import win32con
+import win32api 
+import ctypes
+from ctypes import wintypes
 import logging
 import autopy
 import time
@@ -66,7 +70,7 @@ def shooting():
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
-    set_time = 60*60*60*1.5
+    set_time = 60*60*1.5
     #set_time = 10 
     end_time = 0
     exp_time = end_time-begin_time
@@ -93,6 +97,7 @@ def begin_end():
     #run_DaemonThread()
     "不用子线程的方式打开手游, 线程会停在run_os(),不会继续下去."
     #run_os()
+    #os.system("pause")
     time.sleep(3)
     open_game()
     print 'open_game'
@@ -125,7 +130,7 @@ def begin_begin():
     "开始捕鱼来了,休息一下,继续"
     while True:
         begin_end()
-        #relax_time = 60*60*1.5
+        print time.clock()
         relax_time = 60*15
         #relax_time = 5
         time.sleep(relax_time)
