@@ -13,38 +13,6 @@ import win32api
 import subprocess
 import threading
 import win32api
-'''
-守护线程的实例为什么先于run_DaemonThread运行?
-估计是非正常关闭本程序, 有资源没有释放.
-'''
-#class MyThread(threading.Thread):
-#    "守护线程打开手游"
-#    print 'MyThread \n'
-#    def run(self):
-#        print "out -->{} \n".format(out)
-def run_DaemonThread():
-    "运行守护线程"
-    t = MyThread()
-    print "t -->{} \n".format(t)
-    t.setDaemon(True)
-    t.start()
-    print 't.start \n'
-#run_DaemonThread()
-def run_os():
-    "os.system命令打开手游"
-    print 'run_os'
-    os.system('run_shouYou.bat')
-'''
-用桌面的快捷方式启动,
-跳出的shell窗口,会把手游助手的图标挡住.
-'''
-def begin__mouse():
-    print 'begin__mouse'
-    "模拟鼠标双击手游快捷方式位置"
-    click(115, 129)
-'''
-合适的时间关闭子进程
-'''
 def begin_subProcess():
     "用子进程打开手游"
     print 'begin_subProcess run'
@@ -98,8 +66,8 @@ def shooting():
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
-    #set_time = 60*60*60*1.5
-    set_time = 10 
+    set_time = 60*60*60*1.5
+    #set_time = 10 
     end_time = 0
     exp_time = end_time-begin_time
     while exp_time < set_time:
@@ -128,10 +96,10 @@ def begin_end():
     time.sleep(3)
     open_game()
     print 'open_game'
-    time.sleep(10)
+    time.sleep(5)
     open_byl()
     print 'open_byl'
-    time.sleep(80)
+    time.sleep(70)
     close_gongGao()
     print 'close_gongGao'
     #os.system("pause")
@@ -158,8 +126,8 @@ def begin_begin():
     while True:
         begin_end()
         #relax_time = 60*60*1.5
-        #relax_time = 60*15
-        relax_time = 5
+        relax_time = 60*15
+        #relax_time = 5
         time.sleep(relax_time)
 def checkin():
     print 'checkin'
