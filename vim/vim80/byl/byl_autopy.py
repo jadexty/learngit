@@ -39,6 +39,7 @@ def exit_shouyou():
     #sys.exit()
     os.system("taskkill /im AppMarket.exe /f")
     os.system("taskkill /im  AndroidEmulator.exe /f")
+    os.system("taskkill /im  adb.exe /f")
     #click(1293.182) 
     #"确认"
     #click(867, 546)
