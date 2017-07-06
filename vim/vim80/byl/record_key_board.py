@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#alt+f1启动记录日志到hook_log.txt, alt+f2停止记录
+
 import pythoncom
 import pyHook
 import time
-#import pyhk
 import os
 import sys
 import ctypes
@@ -13,7 +12,6 @@ import win32con
 import win32api 
 
 class CInspectKeyAndMouseEvent:
-    "Function:键盘和鼠标监控类"
     '''
     Function:键盘和鼠标监控类
     Input：NONE
@@ -24,23 +22,19 @@ class CInspectKeyAndMouseEvent:
     ''' 
     def __init__(self, filename):
         '初始化'
-        print '__init__'
         self.filename = filename
+        
     def open_file(self):
         '打开文件'
-        print 'open_file'
         self.fobj = open(self.filename,  'w') 
         
     def close_file(self):
         '关闭文件'
-        print 'close file'
         self.fobj.close()    
         
     def IsNotWriteLog(self):
         '是否记录日志'
         return  self.bFlag   
-    def terminate(self):
-        self._running = False
         
     def IsExitCommand(self, event):
         '''
@@ -48,13 +42,9 @@ class CInspectKeyAndMouseEvent:
                       如果按下了ALT+F2，将记录日志的状态位置为True,不记录日志,
                      如果按下了ALT+F1，将记录日志状态位置为False,表示记录日志
         '''
-        print 'self.bFlag --->'
-        print self.bFlag
         if event.Alt == 32 and str(event.Key) == 'F2':
             self.bFlag = True
-            import byl_autopy
-            #byl_autopy.begin_begin()
-            #print time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time()))+ ' stop write log'
+            print time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time()))+ ' stop write log'
         elif  event.Alt == 32 and str(event.Key) == 'F1':  
             self.bFlag = False 
             print time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time()))+ ' start write log'
@@ -67,14 +57,14 @@ class CInspectKeyAndMouseEvent:
             return True
         
         self.fobj.writelines('-' * 20 + 'MouseEvent Begin' + '-' * 20 + '\n')
-        #self.fobj.writelines("Current Time:%s\n" % time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time())))
-        #self.fobj.writelines("MessageName:%s\n" % str(event.MessageName))
-        #self.fobj.writelines("Message:%d\n" % event.Message)
-        #self.fobj.writelines("Time_sec:%d\n" % event.Time)
-        #self.fobj.writelines("Window:%s\n" % str(event.Window))
-        #self.fobj.writelines("WindowName:%s\n" % str(event.WindowName))
-        #self.fobj.writelines("Position:%s\n" % str(event.Position))
-        #self.fobj.writelines('-' * 20 + 'MouseEvent End' + '-' * 20 + '\n')
+        self.fobj.writelines("Current Time:%s\n" % time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time())))
+        self.fobj.writelines("MessageName:%s\n" % str(event.MessageName))
+        self.fobj.writelines("Message:%d\n" % event.Message)
+        self.fobj.writelines("Time_sec:%d\n" % event.Time)
+        self.fobj.writelines("Window:%s\n" % str(event.Window))
+        self.fobj.writelines("WindowName:%s\n" % str(event.WindowName))
+        self.fobj.writelines("Position:%s\n" % str(event.Position))
+        self.fobj.writelines('-' * 20 + 'MouseEvent End' + '-' * 20 + '\n')
         return True
     
     def onKeyboardEvent(self, event): 
@@ -86,18 +76,28 @@ class CInspectKeyAndMouseEvent:
         if self.IsNotWriteLog():
             return True       
             
+        self.fobj.writelines('-' * 20 + 'Keyboard Begin' + '-' * 20 + '\n')
+        self.fobj.writelines("Current Time:%s\n" % time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time())))
+        self.fobj.writelines("MessageName:%s\n" % str(event.MessageName))
+        self.fobj.writelines("Message:%d\n" % event.Message)
+        self.fobj.writelines("Time:%d\n" % event.Time)
+        self.fobj.writelines("Window:%s\n" % str(event.Window))
+        self.fobj.writelines("WindowName:%s\n" % str(event.WindowName))
+        self.fobj.writelines("Ascii_code: %d\n" % event.Ascii)
+        self.fobj.writelines("Ascii_char:%s\n" % chr(event.Ascii))
+        self.fobj.writelines("Key:%s\n" % str(event.Key))
+        self.fobj.writelines('-' * 20 + 'Keyboard End' + '-' * 20 + '\n')
         return True
     
     #默认记录
-    bFlag = False 
+    bFlag = False
             
         
 
 def InspectKeyAndMouseEvent():
     "启动监控"
-    print 'exec jian kong'
     my_event = CInspectKeyAndMouseEvent("D:\\hook_log.txt")
-    #my_event.open_file()
+    my_event.open_file()
      
     #创建hook句柄
     hm = pyHook.HookManager()
@@ -105,8 +105,6 @@ def InspectKeyAndMouseEvent():
     #监控键盘
     hm.KeyDown = my_event.onKeyboardEvent
     hm.HookKeyboard()
-    print 'hm.KeyDown -->' 
-    "cannot print hm.KeyDown : unreadable attribute"
     
     #监控鼠标
     hm.MouseAll = my_event.onMouseEvent
@@ -117,15 +115,13 @@ def InspectKeyAndMouseEvent():
     my_event.close_file()             
      
 def handle_start_InspecEvent():
-    "开始监控（按下ALT+ F1）"
-    print 'begin jian kong'
-    #print time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time()))+ ' start write log'
+    "开始监控（按下Ctrl + F1）"
+    print time.strftime('[%Y-%m-%d %H:%M:%S]: ',time.localtime(time.time()))+ ' start write log'
     InspectKeyAndMouseEvent()
 
-def handle_stop_InspecEvent():
-    "停止监控  (按下ALT+ F2)"
-    print 'end jian kong'
-    #InspectKeyAndMouseEvent(False)   
+#def handle_stop_InspecEvent():
+#    "停止监控  (按下Ctrl + F2)"
+#    InspectKeyAndMouseEvent(False)   
         
           
 if __name__ == "__main__":     
@@ -141,7 +137,7 @@ if __name__ == "__main__":
     byref = ctypes.byref
     user32 = ctypes.windll.user32
     
-    #定义快捷键ALT+F1, 不需要定义ALT+F2快捷键.
+    #定义快捷键
     HOTKEYS = {
                1 : (win32con.VK_F1, win32con.MOD_ALT)
 #               2 : (win32con.VK_F2, win32con.MOD_ALT)
@@ -173,9 +169,3 @@ if __name__ == "__main__":
     finally:
         for id in HOTKEYS.keys ():
             user32.UnregisterHotKey (None, id) 
-
-#ImportError: DLL load failed: %1 不是有效的 Win32 应用程序。
-#Hit any key to close this window...
-
-#64位的python,装32位的pyhook模块,会报错.
-
