@@ -59,8 +59,8 @@ def open_beiLvMs():
     "进入倍率模式523, 627"
     click (523, 627)
 def open_fangJian():
-    "进入房间820, 511"
-    click(820, 511)
+    "进入房间 815, 522"
+    click(815, 522)
 def close_weekqd():
     "关闭每周签到"
     click(1194, 325)
@@ -71,8 +71,8 @@ def shooting():
     autopy.mouse.move(x, y) 
     "时长"
     begin_time = time.time()
-    set_time = 60*60*1.5
-    #set_time = 10 
+    #set_time = 60*60*1.5
+    set_time = 10 
     end_time = 0
     exp_time = end_time-begin_time
     while exp_time < set_time:
@@ -92,26 +92,8 @@ def shooting():
         print set_time 
 def begin_end():
     "开始到结束"
-    "subProcess线程运行手游"
-    begin_subProcess()
-    "守护线程打开手游"
-    #run_DaemonThread()
-    "不用子线程的方式打开手游, 线程会停在run_os(),不会继续下去."
-    #run_os()
-    #os.system("pause")
+    jingru_byl()
     time.sleep(3)
-    open_game()
-    print 'open_game'
-    time.sleep(5)
-    open_byl()
-    print 'open_byl'
-    time.sleep(70)
-    close_gongGao()
-    print 'close_gongGao'
-    #os.system("pause")
-    time.sleep(25)
-    close_zhiDaole()
-    print 'close_zhiDaole'
     "判断过十二点,关闭每周签到"
     if False:
         time.sleep(10)
@@ -125,8 +107,9 @@ def begin_end():
     time.sleep(10)
     shooting()
     print 'shooting'
-    exit_shouyou() 
-    print 'exit_shouyou'
+    #exit_shouyou() 
+    #print 'exit_shouyou'
+    checkin()
 def begin_begin():
     "开始捕鱼来了,休息一下,继续"
     while True:
@@ -135,50 +118,77 @@ def begin_begin():
         relax_time = 60*15
         #relax_time = 5
         time.sleep(relax_time)
-def checkin():
-    print 'checkin'
-    "subProcess open shouyou"
+def jingru_byl():
+    "进入捕鱼来了"
     begin_subProcess()
     time.sleep(3)
     open_game()
     print 'open_game'
-    time.sleep(10)
+    time.sleep(3)
     open_byl()
     print 'open_byl'
     time.sleep(80)
     close_gongGao()
     print 'close_gongGao'
     #os.system("pause")
-    time.sleep(25)
+    time.sleep(20)
     close_zhiDaole()
-    "退出当前帐号"
+    print 'close_zhiDaole'
+    #os.system("pause")
+def checkin():
+    "切换账号"
+    print 'checkin'
+    jingru_byl()
+    time.sleep(3)
+    open_set()
+    time.sleep(3)
+    open_beiLvMs()
+    print 'open_beiLvMs'
+    time.sleep(3)
+    os.system("pause")
+    open_fangJian()
+    print 'open_fangJian'
+    time.sleep(5)
+    shooting()
+    time.sleep(2)
+    exit_shouyou()
 def open_set():
+    "打开设置"
     click(410, 798)
+    print 'open mao'
     time.sleep(2)
     "设置"
     click(923, 702)
+    print 'open set'
     time.sleep(2)
     "退出登录"
-    click(464, 1042)
+    click(1067, 602)
+    print 'exit denglu'
     time.sleep(2)
     "残忍退出"
+    print 'jianJue_exit'
     click(699, 640)
     time.sleep(2)
     "与qq好友玩"
     click(979, 761 )
+    print 'play with qq friend'
     time.sleep(3)
     "切换账号"
     click(811, 844)
+    print 'change acount' 
     time.sleep(2)
-    "第一个账号"
-    click(615, 145)
-    time.sleep(2)
+    "最后一个账号"
+    click(613, 679)
+    print 'last acount'
+    time.sleep(10)
     "关闭'知道了'"
     close_zhiDaole()
+    print 'close_zhiDaole'
     "切换账号成功"
-    print 'qiehuan ok'
-begin_begin()
-#checkin()
+    print 'chang acount ok'
+#begin_begin()
+while True:
+    checkin()
 #open_set()
 #checkin()
 '''
