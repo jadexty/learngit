@@ -27,7 +27,7 @@ set whichwrap=b,s,<,>,[,]
 set nobomb
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 " Vim 的默认寄存器和系统剪贴板共享
-set clipboard+=unnamed
+"set clipboard+=unnamed
 " }}}
 
 " Lang & Encoding {{{
@@ -191,9 +191,9 @@ let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
 "}}}
 "显示git信息{{{
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "Modified",
+    \ "Mod"  : "Modified",
     \ "Staged"    : "Staged",
-    \ "Untracked" : "Untracked",
+    \ "Un" : "Untracked",
     \ "Renamed"   : "Renamed",
     \ "Unmerged"  : "Unmerged",
     \ "Deleted"   : "Deleted",
@@ -287,6 +287,10 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 map <f5> :w<cr>:!python %<cr>
 "}}}
 
+
+"f6 运行py文件 {{{
+map <f6> :w<cr>:!python % >%:h\%:r_log<cr>
+"}}}
 
 "在上方插入一个空行{{{
 "map tt O<Esc>
