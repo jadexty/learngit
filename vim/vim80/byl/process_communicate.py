@@ -2,6 +2,7 @@
 #----------------------
 #进程间通信
 #我们以Queue为例，在父进程中创建两个子进程，一个往Queue里写数据，一个从Queue里读数据：
+#一个proecess往queue里面put一个,马上就被另一个process给read出来,表明多进程是同时进行的.
 
 from multiprocessing import Process, Queue
 import os, time, random
@@ -32,3 +33,14 @@ if __name__=='__main__':
     pw.join()
     # pr进程里是死循环，无法等待其结束，只能强行终止:
     pr.terminate()
+
+'''
+Put A to queue...
+Get A from queue.
+Put B to queue...
+Get B from queue.
+Put C to queue...
+Get C from queue.
+Hit any key to close this window...
+
+'''

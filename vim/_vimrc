@@ -140,10 +140,10 @@ let g:airline_symbols.space = "\ua0"
 "}}}
 
 "NerdTree {{{
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 let NERDTreeShowBookmarks=1
@@ -287,9 +287,8 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 map <f5> :w<cr>:!python %<cr>
 "}}}
 
-
 "f6 运行py文件 {{{
-map <f6> :w<cr>:!python % >%:h\%:r_log<cr>
+map <f6> :w<cr>:!python % >%:r_log<cr>
 "}}}
 
 "在上方插入一个空行{{{

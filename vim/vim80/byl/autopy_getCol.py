@@ -9,21 +9,25 @@ import math
 import time
 import random
 import os
+def if_pause():
+    n = 0 
+    cols = [0,0,0,0,0,0,0,0,0,0]
+    pos = (813, 762)
+    while n < 10:
+        print "n-->{} \n".format(n)
+        col = autopy.bitmap.capture_screen().get_color(pos[0], pos[1]) 
+        cols[n] = col
+        print "colr -->{} \n".format(col)
+        n = n + 1
+        time.sleep(1)
+    print "cols-->{} \n".format(cols)
+'''
+如果cols里面的元素都一样,表示游戏卡死, 
+'''
 
-n = 0 
-cols = [0,0,0]
-pos = (913, 801)
-while n < 3:
-    print "n-->{} \n".format(n)
-    col = autopy.bitmap.capture_screen().get_color(pos[0], pos[1]) 
-    cols[n] = col
-    print "colr -->{} \n".format(col)
-    n = n + 1
-    time.sleep(1)
-print "cols-->{} \n".format(cols)
+
+#time.sleep(3)
 #os.system('pause')
-time.sleep(3)
-n = 0
 #print "t -->{} \n".format(t)
 
 #print "hex(col) -->{} \n".format(hex(col))
