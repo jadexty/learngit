@@ -29,22 +29,21 @@ class If_pause:
         self._running = False
     
     def run(self):
-        "子线程只能访问主线程的global变量"
         print "self._running --->{} \n".format(self._running)
-        def if_pause(self):
-            n = 0 
-            cols = [0,0,0,0,0,0,0,0,0,0]
-            pos = (813, 762)
-            while n < 10:
-                print "n-->{} \n".format(n)
-                col = autopy.bitmap.capture_screen().get_color(pos[0], pos[1]) 
-                cols[n] = col
-                print "colr -->{} \n".format(col)
-                n = n + 1
-                time.sleep(1)
-            print "cols-->{} \n".format(cols)
-            return cols          
-        cols = if_pause(self)
+        #def if_pause(self):
+        n = 0 
+        cols = [0,0,0,0,0,0,0,0,0,0]
+        pos = (813, 762)
+        while n < 10:
+            print "n-->{} \n".format(n)
+            col = autopy.bitmap.capture_screen().get_color(pos[0], pos[1]) 
+            cols[n] = col
+            print "colr -->{} \n".format(col)
+            n = n + 1
+            time.sleep(1)
+        print "cols-->{} \n".format(cols)
+            #return cols          
+        #cols = if_pause(self)
         os.system('pause')
         "判断cols里面的元素是否都一样"
         diff = False 
@@ -61,6 +60,7 @@ class If_pause:
         print 'diff --> {} \n'.format(diff) 
         "如果一样,就给全局变量pause设置为True"
         if diff == False:
+            "子线程只能访问主线程的global变量"
             global pause 
             pause = True
         print 'pause -->{} \n'.format(pause) 
