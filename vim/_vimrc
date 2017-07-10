@@ -137,6 +137,19 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "Modified",
+    \ "Staged"    : "Staged",
+    \ "Untracked" : "Untracked",
+    \ "Renamed"   : "Renamed",
+    \ "Unmerged"  : "Unmerged",
+    \ "Deleted"   : "Deleted",
+    \ "Dirty"     : "dirty",
+    \ "Clean"     : "clean",
+    \ "Unknown"   : "Unknown"
+    \ }
+
 "}}}
 
 "NerdTree {{{
@@ -189,20 +202,8 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
 "}}}
-"显示git信息{{{
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Mod"  : "Modified",
-    \ "Staged"    : "Staged",
-    \ "Un" : "Untracked",
-    \ "Renamed"   : "Renamed",
-    \ "Unmerged"  : "Unmerged",
-    \ "Deleted"   : "Deleted",
-    \ "Dirty"     : "dirty",
-    \ "Clean"     : "clean",
-    \ "Unknown"   : "Unknown"
-    \ }
 
-"}}}
+
 "neocomplete{{{
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
