@@ -139,15 +139,15 @@ endif
 let g:airline_symbols.space = "\ua0"
 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "Modified",
-    \ "Staged"    : "Staged",
-    \ "Untracked" : "Untracked",
-    \ "Renamed"   : "Renamed",
-    \ "Unmerged"  : "Unmerged",
-    \ "Deleted"   : "Deleted",
-    \ "Dirty"     : "dirty",
-    \ "Clean"     : "clean",
-    \ "Unknown"   : "Unknown"
+    \ "Modified"  : "M",
+    \ "Staged"    : "S",
+    \ "Untracked" : "U",
+    \ "Renamed"   : "R",
+    \ "Unmerged"  : "U",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "d",
+    \ "Clean"     : "c",
+    \ "Unknown"   : "U"
     \ }
 
 "}}}
