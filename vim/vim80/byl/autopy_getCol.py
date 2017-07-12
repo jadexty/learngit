@@ -21,6 +21,7 @@ def if_pause():
         n = n + 1
         time.sleep(1)
     print "cols-->{} \n".format(cols)
+if_pause()
 '''
 如果cols里面的元素都一样,表示游戏卡死, 
 '''

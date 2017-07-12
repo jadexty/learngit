@@ -1,28 +1,62 @@
 #encoding=utf8
 #-------------------
 #autopy的找图功能
-#
+#运行三次能有一次有数值对上
 #------------------------
 import autopy
 import math
 import time
 import random
+'''
+运行三次能有一次取上数值
+'''
+#autopy.bitmap.capture_screen().save('print_screen.png')
+#print_screen = autopy.bitmap.Bitmap.open('print_screen.png')
+pos = (770, 441)
+print_screen = autopy.bitmap.capture_screen()
+cols = [0,0,0] 
+n = 0
+while n < 3:
+    col = print_screen.get_color(pos[0],pos[1])
+    cols[n] = col
+    n = n + 1
+print "print_screen --> {} \n".format(print_screen) 
+print 'pos --> {} \n'.format(pos) 
+print 'col--> {} \n'.format(col) 
+print 'cols-> {} \n'.format(cols) 
 
-col = autopy.bitmap.capture_screen().get_color(113, 343) 
-rgb = autopy.color.hex_to_rgb(autopy.screen.get_color())
-print "colr -->{} \n".format(col)
-print "hex(col) -->{} \n".format(hex(col))
-print "rgb -->{} \n".format(rgb) 
+#print autopy.color.hex_to_rgb(col)
+'''
+Absolute:	770, 441 (less often used)
+Relative:	770, 441 (default)
+Client:	770, 441 (recommended)
+ClassNN:	SysListView321
+Text:	FolderView
+Color:	000200 (Red=00 Green=02 Blue=00)
+	x: 0	y: 0	w: 1680	h: 1050
+Client:	x: 0	y: 0	w: 1680	h: 1050
+'''
 
-#
-#colr -->15921906
-#
-#hex(col) -->0xf2f2f2
-#
-#rgb -->(0, 0, 0)
-#
+'''
+C:\windows\system32\cmd.exe /c (python autopy_tutoil.py)
+<Bitmap object at 0x00000000022B6260 with resolution 16801050, 32 bits per pixel
+, and 4 bytes per pixel>
+3427939
+0x344e63
+(52, 78, 99)
+Hit any key to close this window...
+'''
+
+
+
+#print autopy.color.hex_to_rgb(hex(col))
+#print sect
+#4887882
+#0x4a954a
+#[]
 #Hit any key to close this window...
 
+#Color:	4A954A (Red=4A Green=95 Blue=4A)
 
 #print autopy.bitmap.Bitmap.open('2.png')
 #str_c = autopy.bitmap.Bitmap.open('2.png').to_string()
@@ -32,9 +66,6 @@ print "rgb -->{} \n".format(rgb)
 #autopy.bitmap.capture_screen().save('print_screen.png')
     
 #barrel = autopy.bitmap.Bitmap.open('2_3.png')
-#barrel = autopy.bitmap.Bitmap.open('screengrab.png')
-#monkey = barrel.get_portion((100,11),(10,12))
-#monkey = autopy.bitmap.Bitmap.open('jinJCTS.png')
 #monkey = autopy.bitmap.Bitmap.open('jinJCTS_1.png')
 #pos = barrel.find_every_bitmap(monkey)
 #print pos

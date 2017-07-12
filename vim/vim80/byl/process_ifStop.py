@@ -15,12 +15,15 @@ import subprocess
 import win32api
 
 def if_stop(q):
-    "判断是否暂停的进程"
-    n = 0 
+    '''
+    每过一秒钟取pos位置的颜色,一共10秒,判断这10个颜色是否一样,
+    如果一样就表示游戏已经停止了.
+    '''
     cols = [0,0,0,0,0,0,0,0,0,0]
+    n = 0
     pos = (813, 762)
     "每过一秒,将pos位置的color放入cols"
-    while n < 10:
+    while n < len(cols):
         print "n-->{} \n".format(n)
         col = autopy.bitmap.capture_screen().get_color(pos[0], pos[1]) 
         cols[n] = col
@@ -48,62 +51,16 @@ def if_stop(q):
     #os.system('pause')
 
 if __name__=='__main__':
+    "通过进程共享变量q来判断游戏是否停止"
+    byl_stop = false
     q = Queue()
     proc_ifStop = Process(target=if_stop, args=(q,))
     proc_ifStop.start()
-    print ('q.get(True) -->%s'%q.get(True))
-
-#由下面的输出结果可以看出,start之后,主线程和子线程交替执行.
-
-'''
-没有c.terminate()加入的执行顺序:
-C:\windows\system32\cmd.exe /c (python thread_signal.py)
-__init__
-
-t.start()
-self._running --->True
+    "取出q的值给标志标量byl_stop"
+    byl_stop = q.get(True)
+    print ('byl_stop -->%s'%byl_stop)
 
 
-('T-minus', 10)
-('T-minus', 9)
-('T-minus', 8)
-('T-minus', 7)
-('T-minus', 6)
-('T-minus', 5)
-('T-minus', 4)
-('T-minus', 3)
-('T-minus', 2)
-('T-minus', 1)
-t.join()
 
-Hit any key to close this window...
-
-'''
-'''
-terminate加入的结果:
-C:\windows\system32\cmd.exe /c (python thread_signal.py)
-__init__
-
-self._running --->True
-t.start()
-
-
-c.terminate()
-t.join()
-
-Hit any key to close this window...
-
-=========================
-C:\windows\system32\cmd.exe /c (python thread_signal.py)
-__init__
-
-t.start()
-self._running --->True
-
-
-c.terminate()
-t.join()
-
-Hit any key to close this window...
-
-'''
+    "停止proc_ifStop"
+    #proc_ifStop.terminate()
