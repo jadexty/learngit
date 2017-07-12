@@ -6,7 +6,7 @@
 #用一个进程监控游戏是否卡住,如果卡住就从头再来一次.
 #
 #需要进程proce_ws和proce_bg通信: 
-#proce_bg告诉proce_ws,要休息多少时间,proce_ws要告诉dg画面是否暂停.
+#proce_bg告诉proce_ws,要休息多少时间,proce_ws要告h诉dg画面是否暂停.
 #---------------
 import datetime
 import win32con
@@ -23,17 +23,50 @@ import win32api
 import subprocess
 import threading
 import win32api
+from win32api import GetSystemMetrics
 #from multiprocessing import Process, Queue
+def fenBianlv():
+    "根据屏幕分辨率计算偏移系数px和py"
+    "取得屏幕分辨率"
+    print "current_width =", GetSystemMetrics (0)
+    width = GetSystemMetrics(0)
+    print "current_height =",GetSystemMetrics (1)
+    height = GetSystemMetrics(1)
+    "计算相对默认1680,  1050的偏移量"
+    w = 1680.0
+    h = 1050.0
+    print ('w: %s'%w)
+    print ('h: %s'%h)
+    px = w/width
+    py = h/height
+    pxy = list(range(2)) 
+    pxy[0] = px
+    pxy[1] = py
+    print ('px %s'%pxy[0])
+    print ('py %s'%pxy[1])
+    return pxy 
 def subProcess_shouyou():
     child = subprocess.Popen(["D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe" ])
 def click(x,y):
-    "鼠标移动到指定位置,左键点击一下"
-    autopy.mouse.move(x,y)
-    autopy.mouse.click()
-    autopy.mouse.toggle(True)
-    time.sleep(0.2)
-    autopy.mouse.toggle(False)
-    time.sleep(0.2)
+    "鼠标移动指定位置,左键点击一下"
+    x1 = int(x*fenBianlv()[0]) 
+    y1 = int(y*fenBianlv()[1]) 
+    print ('x1: %s \n'%x1)
+    print ('y1: %s \n'%y1)
+
+    windll.user32.SetCursorPos(x1, y1)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x1, y1)
+    time.sleep(0.05)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x1, y1)
+
+
+    #autopy.mouse.move(x,y)
+    #autopy.mouse.move(x1,y1)
+    #autopy.mouse.click()
+    #autopy.mouse.toggle(True)
+    #time.sleep(0.2)
+    #autopy.mouse.toggle(False)
+    #time.sleep(0.2)
 def open_game():
     "我的游戏658, 215"
     click(658,215)
@@ -78,10 +111,22 @@ def shooting():
     "定点循环攻击"
     x = 1287 
     y = 637 
-    autopy.mouse.move(x, y) 
+    x1 = int(x*fenBianlv()[0])
+    y1 = int(y*fenBianlv()[1])
+    #autopy.mouse.move(x, y) 
+    windll.user32.SetCursorPos(x1, y1)
     while True:
-        autopy.mouse.click()
-        autopy.mouse.toggle(True)
+        pos = [x,y]
+        "鼠标左键点击"
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x1, y1)
+        time.sleep(0.05)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x1, y1)
+
+        #autopy.mouse.click()
+        #autopy.mouse.toggle(True)
+        ##time.sleep(0.005)
+        #autopy.mouse.toggle(False)
+        #time.sleep(0.01)
 
 def begin_exit():
     "开始到结束"
@@ -117,11 +162,12 @@ def jingru_byl():
     time.sleep(3)
 
     open_byl()
-    print 'time.sleep(120)'
+    print 'time.sleep(70)'
     time.sleep(70)
 
     close_gongGao()
-    time.sleep(20)
+    print 'time.sleep(20)'
+    time.sleep(30)
 
     close_zhiDaole()
     close_zhiDaole()
