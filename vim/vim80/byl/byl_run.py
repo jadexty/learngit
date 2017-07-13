@@ -7,6 +7,7 @@
 #
 #需要进程proce_ws和proce_bg通信: 
 #proce_bg告诉proce_ws,要休息多少时间,proce_ws要告h诉dg画面是否暂停.
+#autopy会有越界的错误提示,用cytpes就没有.
 #---------------
 import datetime
 import win32con
@@ -35,38 +36,34 @@ def fenBianlv():
     "计算相对默认1680,  1050的偏移量"
     w = 1680.0
     h = 1050.0
-    print ('w: %s'%w)
-    print ('h: %s'%h)
+    #print ('w: %s'%w)
+    #print ('h: %s'%h)
     px = w/width
     py = h/height
     pxy = list(range(2)) 
     pxy[0] = px
     pxy[1] = py
-    print ('px %s'%pxy[0])
-    print ('py %s'%pxy[1])
+    #print ('px %s'%pxy[0])
+    #print ('py %s'%pxy[1])
     return pxy 
 def subProcess_shouyou():
     child = subprocess.Popen(["D:\Program Files\TxGameAssistant\AppMarket\AppMarket.exe" ])
 def click(x,y):
     "鼠标移动指定位置,左键点击一下"
-    x1 = int(x*fenBianlv()[0]) 
-    y1 = int(y*fenBianlv()[1]) 
-    print ('x1: %s \n'%x1)
-    print ('y1: %s \n'%y1)
+    fbl = []
+    fbl = fenBianlv()
+    x1 = int(x*fbl[0]) 
+    y1 = int(y*fbl[1]) 
+    #print ('x1: %s \n'%x1)
+    #print ('y1: %s \n'%y1)
 
     windll.user32.SetCursorPos(x1, y1)
+    print 'mouse move to {}, {}'.format(x1,y1)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x1, y1)
+    #print 'mouse leftdown'
     time.sleep(0.05)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x1, y1)
-
-
-    #autopy.mouse.move(x,y)
-    #autopy.mouse.move(x1,y1)
-    #autopy.mouse.click()
-    #autopy.mouse.toggle(True)
-    #time.sleep(0.2)
-    #autopy.mouse.toggle(False)
-    #time.sleep(0.2)
+    #print 'mouse leftup'
 def open_game():
     "我的游戏658, 215"
     click(658,215)
@@ -122,12 +119,6 @@ def shooting():
         time.sleep(0.05)
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x1, y1)
 
-        #autopy.mouse.click()
-        #autopy.mouse.toggle(True)
-        ##time.sleep(0.005)
-        #autopy.mouse.toggle(False)
-        #time.sleep(0.01)
-
 def begin_exit():
     "开始到结束"
     print 'begin_exit\n'
@@ -169,7 +160,10 @@ def jingru_byl():
     print 'time.sleep(20)'
     time.sleep(30)
 
+    print 'close_zhiDaole will do'
     close_zhiDaole()
+    time.sleep(3)
+    print 'close_zhiDaole will do again..'
     close_zhiDaole()
 
 def checkin():
@@ -228,4 +222,4 @@ def open_set():
     print 'close_zhiDaole \n'
     "切换账号成功"
     print 'chang acount ok \n'
-begin_exit()
+
