@@ -1,0 +1,83 @@
+avg: 88
+i: screen_jjcts.png
+avg: 88
+i: screen_blv.png
+avg: 196
+i: screen_jq.png
+avg: 196
+while n: 0
+h_d: 671
+same
+if n: 0
+current_width = 1680
+current_height = 1050
+mouse move to 1205, 285
+mouse leftdown
+mouse leftup
+diff
+while n: 1
+h_d: 47000
+diff
+while n: 2
+h_d: 45949
+diff
+t: 0
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 1
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 2
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 3
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 4
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 5
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 6
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 7
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 8
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup
+t: 9
+current_width = 1680
+current_height = 1050
+mouse move to 800, 600
+mouse leftdown
+mouse leftup

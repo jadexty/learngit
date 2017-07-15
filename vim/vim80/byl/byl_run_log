@@ -1,0 +1,43 @@
+begin_exit
+
+width = 1680
+height = 1050
+w: 1680.0
+h: 1050.0
+px 1.0
+py 1.0
+pxy(px) 1.0
+pxy(py) 1.0
+width = 1680
+height = 1050
+w: 1680.0
+h: 1050.0
+px 1.0
+py 1.0
+pxy(px) 1.0
+pxy(py) 1.0
+x1:658
+y1:215
+open_game 
+
+width = 1680
+height = 1050
+w: 1680.0
+h: 1050.0
+px 1.0
+py 1.0
+pxy(px) 1.0
+pxy(py) 1.0
+width = 1680
+height = 1050
+w: 1680.0
+h: 1050.0
+px 1.0
+py 1.0
+pxy(px) 1.0
+pxy(py) 1.0
+x1:657
+y1:359
+open_byl 
+
+time.sleep(70)

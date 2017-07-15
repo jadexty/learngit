@@ -1,0 +1,708 @@
+请按任意键继续. . . main set Hotkey start
+<ctypes.wintypes.MSG object at 0x0000000002634E48>
+process begin_begin runing 
+main th_ifDiff start
+
+begin_exit
+
+mouse move to 658, 215
+open_game 
+
+mouse move to 657, 359
+open_byl 
+
+time.sleep(70)
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 113;n: 0
+diff
+h_d: 121;n: 1
+diff
+h_d: 107;n: 2
+diff
+h_d: 113;n: 3
+diff
+h_d: 102;n: 4
+diff
+h_d: 118;n: 5
+diff
+h_d: 112;n: 6
+diff
+h_d: 108;n: 7
+diff
+h_d: 93;n: 8
+diff
+h_d: 93;n: 9
+diff
+h_d: 109;n: 10
+diff
+h_d: 110;n: 11
+diff
+h_d: 97;n: 12
+diff
+h_d: 76;n: 13
+diff
+h_d: 74;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 112;n: 0
+diff
+h_d: 120;n: 1
+diff
+h_d: 106;n: 2
+diff
+h_d: 112;n: 3
+diff
+h_d: 103;n: 4
+diff
+h_d: 117;n: 5
+diff
+h_d: 111;n: 6
+diff
+h_d: 107;n: 7
+diff
+h_d: 94;n: 8
+diff
+h_d: 94;n: 9
+diff
+h_d: 108;n: 10
+diff
+h_d: 109;n: 11
+diff
+h_d: 96;n: 12
+diff
+h_d: 77;n: 13
+diff
+h_d: 73;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 110;n: 0
+diff
+h_d: 136;n: 1
+diff
+h_d: 106;n: 2
+diff
+h_d: 112;n: 3
+diff
+h_d: 113;n: 4
+diff
+h_d: 121;n: 5
+diff
+h_d: 129;n: 6
+diff
+h_d: 111;n: 7
+diff
+h_d: 106;n: 8
+diff
+h_d: 92;n: 9
+diff
+h_d: 132;n: 10
+diff
+h_d: 121;n: 11
+diff
+h_d: 96;n: 12
+diff
+h_d: 81;n: 13
+diff
+h_d: 93;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 77;n: 0
+diff
+h_d: 123;n: 1
+diff
+h_d: 121;n: 2
+diff
+h_d: 75;n: 3
+diff
+h_d: 114;n: 4
+diff
+h_d: 122;n: 5
+diff
+h_d: 98;n: 6
+diff
+h_d: 92;n: 7
+diff
+h_d: 113;n: 8
+diff
+h_d: 89;n: 9
+diff
+h_d: 93;n: 10
+diff
+h_d: 98;n: 11
+diff
+h_d: 89;n: 12
+diff
+h_d: 84;n: 13
+diff
+h_d: 94;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 81;n: 0
+diff
+h_d: 63;n: 1
+diff
+h_d: 69;n: 2
+diff
+h_d: 79;n: 3
+diff
+h_d: 76;n: 4
+diff
+h_d: 74;n: 5
+diff
+h_d: 72;n: 6
+diff
+h_d: 86;n: 7
+diff
+h_d: 75;n: 8
+diff
+h_d: 87;n: 9
+diff
+h_d: 93;n: 10
+diff
+h_d: 90;n: 11
+diff
+h_d: 101;n: 12
+diff
+h_d: 100;n: 13
+diff
+h_d: 104;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 89;n: 0
+diff
+h_d: 59;n: 1
+diff
+h_d: 69;n: 2
+diff
+h_d: 85;n: 3
+diff
+h_d: 68;n: 4
+diff
+h_d: 72;n: 5
+diff
+h_d: 80;n: 6
+diff
+h_d: 90;n: 7
+diff
+h_d: 67;n: 8
+diff
+h_d: 89;n: 9
+diff
+h_d: 89;n: 10
+diff
+h_d: 86;n: 11
+diff
+h_d: 101;n: 12
+diff
+h_d: 96;n: 13
+diff
+h_d: 98;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 89;n: 0
+diff
+h_d: 59;n: 1
+diff
+h_d: 69;n: 2
+diff
+h_d: 85;n: 3
+diff
+h_d: 68;n: 4
+diff
+h_d: 72;n: 5
+diff
+h_d: 80;n: 6
+diff
+h_d: 90;n: 7
+diff
+h_d: 67;n: 8
+diff
+h_d: 89;n: 9
+diff
+h_d: 89;n: 10
+diff
+h_d: 86;n: 11
+diff
+h_d: 101;n: 12
+diff
+h_d: 96;n: 13
+diff
+h_d: 98;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 77;n: 0
+diff
+h_d: 87;n: 1
+diff
+h_d: 91;n: 2
+diff
+h_d: 77;n: 3
+diff
+h_d: 102;n: 4
+diff
+h_d: 88;n: 5
+diff
+h_d: 82;n: 6
+diff
+h_d: 16;n: 7
+same
+if n: 7
+mouse move to 1198, 305
+diff
+h_d: 105;n: 8
+diff
+h_d: 93;n: 9
+diff
+h_d: 97;n: 10
+diff
+h_d: 74;n: 11
+diff
+h_d: 83;n: 12
+diff
+h_d: 80;n: 13
+diff
+h_d: 80;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 102;n: 0
+diff
+h_d: 126;n: 1
+diff
+h_d: 128;n: 2
+diff
+h_d: 100;n: 3
+diff
+h_d: 117;n: 4
+diff
+h_d: 117;n: 5
+diff
+h_d: 99;n: 6
+diff
+h_d: 101;n: 7
+diff
+h_d: 116;n: 8
+diff
+h_d: 108;n: 9
+diff
+h_d: 86;n: 10
+diff
+h_d: 101;n: 11
+diff
+h_d: 112;n: 12
+diff
+h_d: 97;n: 13
+diff
+h_d: 91;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 77;n: 0
+diff
+h_d: 83;n: 1
+diff
+h_d: 81;n: 2
+diff
+h_d: 75;n: 3
+diff
+h_d: 88;n: 4
+diff
+h_d: 72;n: 5
+diff
+h_d: 94;n: 6
+diff
+h_d: 88;n: 7
+diff
+h_d: 93;n: 8
+diff
+h_d: 1;n: 9
+same
+if n: 9
+mouse move to 1195, 328
+diff
+h_d: 97;n: 10
+diff
+h_d: 92;n: 11
+diff
+h_d: 85;n: 12
+diff
+h_d: 96;n: 13
+diff
+h_d: 102;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 87;n: 0
+diff
+h_d: 91;n: 1
+diff
+h_d: 85;n: 2
+diff
+h_d: 87;n: 3
+diff
+h_d: 88;n: 4
+diff
+h_d: 98;n: 5
+diff
+h_d: 82;n: 6
+diff
+h_d: 66;n: 7
+diff
+h_d: 95;n: 8
+diff
+h_d: 91;n: 9
+diff
+h_d: 51;n: 10
+diff
+h_d: 2;n: 11
+same
+if n: 11
+mouse move to 812, 703
+diff
+h_d: 87;n: 12
+diff
+h_d: 100;n: 13
+diff
+h_d: 100;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 99;n: 0
+diff
+h_d: 79;n: 1
+diff
+h_d: 81;n: 2
+diff
+h_d: 97;n: 3
+diff
+h_d: 80;n: 4
+diff
+h_d: 100;n: 5
+diff
+h_d: 78;n: 6
+diff
+h_d: 88;n: 7
+diff
+h_d: 87;n: 8
+diff
+h_d: 103;n: 9
+diff
+h_d: 5;n: 10
+same
+if n: 10
+mouse move to 809, 704
+diff
+h_d: 52;n: 11
+diff
+h_d: 99;n: 12
+diff
+h_d: 100;n: 13
+diff
+h_d: 102;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 57;n: 0
+diff
+h_d: 73;n: 1
+diff
+h_d: 63;n: 2
+diff
+h_d: 61;n: 3
+diff
+h_d: 72;n: 4
+diff
+h_d: 54;n: 5
+diff
+h_d: 2;n: 6
+same
+if n: 6
+mouse move to 810, 704
+diff
+h_d: 80;n: 7
+diff
+h_d: 77;n: 8
+diff
+h_d: 91;n: 9
+diff
+h_d: 79;n: 10
+diff
+h_d: 78;n: 11
+diff
+h_d: 95;n: 12
+diff
+h_d: 98;n: 13
+diff
+h_d: 94;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 77;n: 0
+diff
+h_d: 93;n: 1
+diff
+h_d: 109;n: 2
+diff
+h_d: 79;n: 3
+diff
+h_d: 84;n: 4
+diff
+h_d: 82;n: 5
+diff
+h_d: 90;n: 6
+diff
+h_d: 80;n: 7
+diff
+h_d: 83;n: 8
+diff
+h_d: 91;n: 9
+diff
+h_d: 95;n: 10
+diff
+h_d: 82;n: 11
+diff
+h_d: 9;n: 12
+same
+if n: 12
+mouse move to 517, 578
+diff
+h_d: 98;n: 13
+diff
+h_d: 102;n: 14
+diff
+i: screen_jjcts.bmp
+i: screen_blv.bmp
+i: screen_jq.bmp
+i: screen_dst.bmp
+i: screen_zdms.bmp
+i: screen_zxsc.bmp
+i: screen_zhidaole.bmp
+i: screen_yxgg.bmp
+i: screen_jsbs.bmp
+i: mzqd.bmp
+i: ccjj_zhidaole.bmp
+i: 1500wjbds.bmp
+i: blms.bmp
+i: ycgk.bmp
+i: hyxw.bmp
+h_d: 102;n: 0
+diff
+h_d: 98;n: 1
+diff
+h_d: 98;n: 2
+diff
+h_d: 102;n: 3
+diff
+h_d: 103;n: 4
+diff
+h_d: 97;n: 5
+diff
+h_d: 97;n: 6
+diff
+h_d: 81;n: 7
+diff
+h_d: 102;n: 8
+diff
+h_d: 98;n: 9
+diff
+h_d: 102;n: 10
+diff
+h_d: 97;n: 11
+diff
+h_d: 98;n: 12
+diff
+h_d: 9;n: 13
+same
+if n: 13
+mouse move to 799, 510
+msg.wParam: 99

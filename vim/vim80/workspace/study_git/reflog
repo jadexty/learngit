@@ -1,0 +1,71 @@
+292b2cd HEAD@{0}: reset: moving to 292b2
+f18f317 HEAD@{1}: commit: 关于冲突解决的笔记完成
+292b2cd HEAD@{2}: commit (merge): conflicted be solved
+e004fbd HEAD@{3}: commit: master 捕鱼来了
+c6f96b6 HEAD@{4}: checkout: moving from byl to master
+8cf58b5 HEAD@{5}: commit: 创建byl分支, 增加一行捕鱼来了,小心啊in test file
+c6f96b6 HEAD@{6}: checkout: moving from master to byl
+c6f96b6 HEAD@{7}: checkout: moving from master to master
+c6f96b6 HEAD@{8}: commit: 创建byl分支,在test里面增加一行捕鱼来了
+673ee2e HEAD@{9}: commit (merge): conflict fixed
+627f069 HEAD@{10}: commit: add 6666
+fb8ae86 HEAD@{11}: checkout: moving from study_git to master
+97b225c HEAD@{12}: commit: add 5555 in test
+f5bd016 HEAD@{13}: checkout: moving from master to study_git
+fb8ae86 HEAD@{14}: checkout: moving from study_git to master
+f5bd016 HEAD@{15}: checkout: moving from master to study_git
+fb8ae86 HEAD@{16}: commit (merge): Merge branch '_vimrc'
+8a39816 HEAD@{17}: checkout: moving from study_git to master
+f5bd016 HEAD@{18}: merge _vimrc: Fast-forward
+a90c782 HEAD@{19}: checkout: moving from _vimrc to study_git
+f5bd016 HEAD@{20}: commit: modified: vim/vim80/study_git/git_note.py
+60a71ff HEAD@{21}: commit: add 444 in test file
+a07c969 HEAD@{22}: commit: add 222 in test file
+a90c782 HEAD@{23}: checkout: moving from _vimr to _vimrc
+a90c782 HEAD@{24}: checkout: moving from study_git to _vimr
+a90c782 HEAD@{25}: reset: moving to a90c782
+a90c782 HEAD@{26}: commit: add 2222
+207794b HEAD@{27}: commit: add some in liaoXF_lesson.py
+d47eb59 HEAD@{28}: checkout: moving from master to study_git
+8a39816 HEAD@{29}: checkout: moving from study_git to master
+d47eb59 HEAD@{30}: checkout: moving from master to study_git
+8a39816 HEAD@{31}: checkout: moving from study_git to master
+d47eb59 HEAD@{32}: checkout: moving from master to study_git
+8a39816 HEAD@{33}: checkout: moving from study_git to master
+d47eb59 HEAD@{34}: checkout: moving from master to study_git
+8a39816 HEAD@{35}: commit: add liaoXF_lesson
+018b13e HEAD@{36}: commit: test
+f6e913c HEAD@{37}: checkout: moving from master to master
+f6e913c HEAD@{38}: checkout: moving from study_git to master
+d47eb59 HEAD@{39}: commit: branch liaoXf
+f6e913c HEAD@{40}: checkout: moving from master to study_git
+f6e913c HEAD@{41}: reset: moving to HEAD
+f6e913c HEAD@{42}: reset: moving to HEAD
+f6e913c HEAD@{43}: reset: moving to HEAD
+f6e913c HEAD@{44}: reset: moving to HEAD
+f6e913c HEAD@{45}: commit: add git_note
+cf20498 HEAD@{46}: commit: click on a line
+e8fb588 HEAD@{47}: commit: add byl_1.py
+706f84d HEAD@{48}: commit: +"333333333333333
+869beae HEAD@{49}: commit: add .....
+2e8aec8 HEAD@{50}: commit: vim/_vimrc
+b2b5e3d HEAD@{51}: reset: moving to b2b5
+9a2e63f HEAD@{52}: reset: moving to 9a2e
+c807abe HEAD@{53}: reset: moving to c807a
+49a7a81 HEAD@{54}: reset: moving to 49a7a
+c807abe HEAD@{55}: reset: moving to HEAD^
+49a7a81 HEAD@{56}: reset: moving to HEAD^
+b2b5e3d HEAD@{57}: commit: add 555
+49a7a81 HEAD@{58}: commit: add 444
+c807abe HEAD@{59}: commit: add 333
+9a2e63f HEAD@{60}: reset: moving to HEAD
+9a2e63f HEAD@{61}: reset: moving to HEAD
+9a2e63f HEAD@{62}: commit: add git_learn
+6d75d60 HEAD@{63}: commit: add title of buyulai_1.py
+5720e6c HEAD@{64}: commit: create a autopy.py
+ee35ae1 HEAD@{65}: commit: remove vim folder from cached
+4d35c8d HEAD@{66}: commit: add set list in _vimrc
+1aa58d3 HEAD@{67}: reset: moving to 1aa58
+73c0d27 HEAD@{68}: reset: moving to HEAD^
+1aa58d3 HEAD@{69}: commit: 'create'
+73c0d27 HEAD@{70}: commit (initial): add _vimrc

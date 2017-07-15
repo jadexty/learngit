@@ -1,0 +1,124 @@
+fbcef41 HEAD@{0}: reset: moving to fbcef
+980a49e HEAD@{1}: reset: moving to 980a4
+0d5420f HEAD@{2}: commit: add autopy_tutoil.py
+4c04713 HEAD@{3}: commit: add bot.py
+ee10b52 HEAD@{4}: commit: add byl_note
+8fdd031 HEAD@{5}: commit: baocun byl_autopy.py
+7f46a79 HEAD@{6}: commit: baocun record_key_board.py
+f520932 HEAD@{7}: commit: baocun hotkey_runPy.py
+1e29181 HEAD@{8}: commit: baocun byl_autopy.py
+f49b321 HEAD@{9}: commit: yuanshi record keyboard.py
+267dc58 HEAD@{10}: commit: add rerord_key_board.py
+a1c7dfd HEAD@{11}: commit: add byl_autopy.bat
+04eaead HEAD@{12}: commit: begin today's work
+1cc49df HEAD@{13}: commit: begin_begin() work ok
+2d09494 HEAD@{14}: commit: shooting is ok
+980a49e HEAD@{15}: reset: moving to 980a49e
+980a49e HEAD@{16}: reset: moving to 980a49e
+a81ecd5 HEAD@{17}: reset: moving to a81ecd
+72b59c6 HEAD@{18}: reset: moving to 72b59c6
+5e11422 HEAD@{19}: reset: moving to 5e114
+980a49e HEAD@{20}: reset: moving to 980a49e
+b41874a HEAD@{21}: reset: moving to b4187
+5e11422 HEAD@{22}: reset: moving to 5e11
+6644f0f HEAD@{23}: reset: moving to 6644f0f
+72b59c6 HEAD@{24}: reset: moving to 72b59
+980a49e HEAD@{25}: commit: daemonThread not ok
+fbcef41 HEAD@{26}: commit: add 1111 in byl_autopy.py
+d674dfd HEAD@{27}: commit: add byl_auto.py
+18f428f HEAD@{28}: commit: add byl_autopy.py
+48e5b96 HEAD@{29}: reset: moving to 48E5B
+7c426a3 HEAD@{30}: reset: moving to 7c426a3
+b41874a HEAD@{31}: commit: daemonThread not ok
+4fb8dfa HEAD@{32}: commit: alt f1 and alt f2 hotkey can work in hotkey_runPy.py
+48e5b96 HEAD@{33}: commit: 倍率道具图片,不能关闭
+7c426a3 HEAD@{34}: commit: daemon thread ok in byl_autopy.py
+9176b36 HEAD@{35}: commit: add some bat files
+e13c633 HEAD@{36}: commit: 用click function replace in byl_mouse_autopy.py
+3f0ff9d HEAD@{37}: commit: 缺少关闭子进程
+72b59c6 HEAD@{38}: commit: subProcess in byl_mouse_autopy.py ok
+6644f0f HEAD@{39}: commit: open 手游助手
+5e11422 HEAD@{40}: commit: byl_mouse.py can shooting
+1e21c12 HEAD@{41}: commit: alt f1 ok in hotkey_runPy.py
+3c6ba86 HEAD@{42}: commit: bat file ok in hotkey_runPy.py
+a81ecd5 HEAD@{43}: commit: create record_keyBoard.py
+432b4b6 HEAD@{44}: reset: moving to HEAD
+432b4b6 HEAD@{45}: reset: moving to HEAD
+432b4b6 HEAD@{46}: commit: alt + f2 ok
+55d516e HEAD@{47}: commit: alt+f1 ok
+0909332 HEAD@{48}: commit: create byl_mouse.py
+f18f317 HEAD@{49}: reset: moving to f18f317
+673ee2e HEAD@{50}: reset: moving to 673ee
+c6f96b6 HEAD@{51}: reset: moving to c6f96
+e004fbd HEAD@{52}: reset: moving to e004
+292b2cd HEAD@{53}: reset: moving to 292b2
+f18f317 HEAD@{54}: commit: 关于冲突解决的笔记完成
+292b2cd HEAD@{55}: commit (merge): conflicted be solved
+e004fbd HEAD@{56}: commit: master 捕鱼来了
+c6f96b6 HEAD@{57}: checkout: moving from byl to master
+8cf58b5 HEAD@{58}: commit: 创建byl分支, 增加一行捕鱼来了,小心啊in test file
+c6f96b6 HEAD@{59}: checkout: moving from master to byl
+c6f96b6 HEAD@{60}: checkout: moving from master to master
+c6f96b6 HEAD@{61}: commit: 创建byl分支,在test里面增加一行捕鱼来了
+673ee2e HEAD@{62}: commit (merge): conflict fixed
+627f069 HEAD@{63}: commit: add 6666
+fb8ae86 HEAD@{64}: checkout: moving from study_git to master
+97b225c HEAD@{65}: commit: add 5555 in test
+f5bd016 HEAD@{66}: checkout: moving from master to study_git
+fb8ae86 HEAD@{67}: checkout: moving from study_git to master
+f5bd016 HEAD@{68}: checkout: moving from master to study_git
+fb8ae86 HEAD@{69}: commit (merge): Merge branch '_vimrc'
+8a39816 HEAD@{70}: checkout: moving from study_git to master
+f5bd016 HEAD@{71}: merge _vimrc: Fast-forward
+a90c782 HEAD@{72}: checkout: moving from _vimrc to study_git
+f5bd016 HEAD@{73}: commit: modified: vim/vim80/study_git/git_note.py
+60a71ff HEAD@{74}: commit: add 444 in test file
+a07c969 HEAD@{75}: commit: add 222 in test file
+a90c782 HEAD@{76}: checkout: moving from _vimr to _vimrc
+a90c782 HEAD@{77}: checkout: moving from study_git to _vimr
+a90c782 HEAD@{78}: reset: moving to a90c782
+a90c782 HEAD@{79}: commit: add 2222
+207794b HEAD@{80}: commit: add some in liaoXF_lesson.py
+d47eb59 HEAD@{81}: checkout: moving from master to study_git
+8a39816 HEAD@{82}: checkout: moving from study_git to master
+d47eb59 HEAD@{83}: checkout: moving from master to study_git
+8a39816 HEAD@{84}: checkout: moving from study_git to master
+d47eb59 HEAD@{85}: checkout: moving from master to study_git
+8a39816 HEAD@{86}: checkout: moving from study_git to master
+d47eb59 HEAD@{87}: checkout: moving from master to study_git
+8a39816 HEAD@{88}: commit: add liaoXF_lesson
+018b13e HEAD@{89}: commit: test
+f6e913c HEAD@{90}: checkout: moving from master to master
+f6e913c HEAD@{91}: checkout: moving from study_git to master
+d47eb59 HEAD@{92}: commit: branch liaoXf
+f6e913c HEAD@{93}: checkout: moving from master to study_git
+f6e913c HEAD@{94}: reset: moving to HEAD
+f6e913c HEAD@{95}: reset: moving to HEAD
+f6e913c HEAD@{96}: reset: moving to HEAD
+f6e913c HEAD@{97}: reset: moving to HEAD
+f6e913c HEAD@{98}: commit: add git_note
+cf20498 HEAD@{99}: commit: click on a line
+e8fb588 HEAD@{100}: commit: add byl_1.py
+706f84d HEAD@{101}: commit: +"333333333333333
+869beae HEAD@{102}: commit: add .....
+2e8aec8 HEAD@{103}: commit: vim/_vimrc
+b2b5e3d HEAD@{104}: reset: moving to b2b5
+9a2e63f HEAD@{105}: reset: moving to 9a2e
+c807abe HEAD@{106}: reset: moving to c807a
+49a7a81 HEAD@{107}: reset: moving to 49a7a
+c807abe HEAD@{108}: reset: moving to HEAD^
+49a7a81 HEAD@{109}: reset: moving to HEAD^
+b2b5e3d HEAD@{110}: commit: add 555
+49a7a81 HEAD@{111}: commit: add 444
+c807abe HEAD@{112}: commit: add 333
+9a2e63f HEAD@{113}: reset: moving to HEAD
+9a2e63f HEAD@{114}: reset: moving to HEAD
+9a2e63f HEAD@{115}: commit: add git_learn
+6d75d60 HEAD@{116}: commit: add title of buyulai_1.py
+5720e6c HEAD@{117}: commit: create a autopy.py
+ee35ae1 HEAD@{118}: commit: remove vim folder from cached
+4d35c8d HEAD@{119}: commit: add set list in _vimrc
+1aa58d3 HEAD@{120}: reset: moving to 1aa58
+73c0d27 HEAD@{121}: reset: moving to HEAD^
+1aa58d3 HEAD@{122}: commit: 'create'
+73c0d27 HEAD@{123}: commit (initial): add _vimrc
