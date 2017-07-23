@@ -15,15 +15,12 @@ import win32api
 import ctypes
 from ctypes import wintypes
 import logging
-import autopy
 import time
 import sys
 import os
 from ctypes import *
-import win32api
 import subprocess
 import threading
-import win32api
 from win32api import GetSystemMetrics
 #from multiprocessing import Process, Queue
 def fenBianlv():

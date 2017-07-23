@@ -15,7 +15,7 @@
 '''
 __author__      = 'jade ty'
 
-from byl_run import shooting
+#from byl_run import shooting
 import operator
 from PIL import Image,ImageGrab
 import itertools
@@ -40,12 +40,14 @@ def get_hash(img):
         avg = sum(pixels) / len(pixels)#计算pixels里面元素的平均数
         #print 'avg: {}'.format(avg)
         "根据平均数avg,将pixels转为二进制字符串"
-        #print '"".join(map(lambda p : "1" if p > avg else "0", pixels)): {}'.format("".join(map(lambda p : "1" if p > avg else "0", pixels)))
-        return "".join(map(lambda p : "1" if p > avg else "0", pixels))
+        hash =  "".join(map(lambda p : "1" if p > avg else "0", pixels))
 
+        return hash 
 def hamming_dist(tz_hash, current_hash):
-    "汉明距离表示图像的相似性"
-    return sum(itertools.imap(operator.ne, tz_hash, current_hash))
+"汉明距离表示图像的相似性"
+    haming = sum(itertools.imap(operator.ne, tz_hash, current_hash))
+    return haming 
+
 def tz_hash():
     "计算特征图的hash, 返回一个包含hash的list"
     tz_bmp= ['screen_jjcts.bmp'] #0 金甲锤头鲨
@@ -69,16 +71,16 @@ def tz_hash():
     #tz_bmp.append()
     #tz_bmp= ['jt.bmp']
     #print 'tz_bmp:{}'.format(tz_bmp) 
-    hash1 = []
+    hash= []
     for i in tz_bmp:
         print 'i: {}'.format(i)
         "box表示截图的区域"
         img = Image.open('bmp\\'+i).crop(box)
         #img.show()
-        hash1.append(get_hash(img))
-        #print 'hash1: {}'.format(hash1)
+        hash.append(get_hash(img))
+        #print 'hash: {}'.format(hash)
     #os.system('pause')
-    return hash1
+    return hash 
 
 def hm_dic():
     "截取目前屏幕的box区域"
@@ -87,7 +89,7 @@ def hm_dic():
     #current_pic.show()
     current_hash = get_hash(current_pic)
 
-    "比较特征图和截图的相似性,小于1000,表示一致."
+    "比较特征图和截图的相似性."
     tz_l = []#先算出来,减少循环计算
     tz_l= tz_hash()
     like= 20 #相似的汉明距离设定值,实验数据一般为5,不同就有好几十.
@@ -143,7 +145,7 @@ def hm_dic():
                 time.sleep(1)
                 click(799, 510)
                 time.sleep(1)
-                shooting()
+                #shooting()
             elif n == 14:#海妖漩涡
                 time.sleep(1)
                 click(799, 510)

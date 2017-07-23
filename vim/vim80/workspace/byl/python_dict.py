@@ -26,14 +26,17 @@ d2 = {1.1: 100}
 print 'd2: {}'.format(d2)
 
 '查找'
-print 'd["jade"]: {} \n'.format(d['jade'])
 print 'd["jade"]: {} \n'.format(d["jade"])
 print 'd["jade"]: {} \n'.format(d.get("jade"))
-print 'd["jade"]: {} \n'.format(d.get("Thomas"))
+print 'd["Thomas"]: {} \n'.format(d.get("Thomas"))
 
+key = d.keys()[d.values().index(100)]
+print 'value:{} key:{} \n'.format(100,key)
 '增加'
 d['Adam'] = 80
 print 'd:{}'.format(d)
+d[1] = 11
+print 'd:{} \n'.format(d)
 '修改'
 d['Adam'] = 88
 print 'd:{}'.format(d)
@@ -43,3 +46,18 @@ print 'd:{}'.format(d)
 'list不能作为key'
 l = [1,2]
 #d[l] = 'a list'
+
+'遍历字典'
+hash_pos = {}
+hash_pos['a'] = (100,212)
+hash_pos['b'] = (10,22)
+'遍历key'
+for key in hash_pos.keys():
+    print 'key:{}\n'.format(key)
+'遍历values'
+for value in hash_pos.values():
+    print 'value:{} \n'.format(value)
+'遍历items'
+for key,value  in hash_pos.items():
+    print 'key:{}, vaulue: {}'.format(key,value)
+
